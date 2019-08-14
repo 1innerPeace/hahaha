@@ -65,7 +65,7 @@ public class CartController {
                 // 删除cookie中的购物车
                 cartCookieHandler.deleteCartCookie(request,response);
             }else{
-                // 从redis中取得，或者从数据库中
+                // 从redis中取得，或者从数据库中.
                 cartList= cartService.getCartList(userId);
             }
             request.setAttribute("cartList",cartList);
